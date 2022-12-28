@@ -12,6 +12,8 @@ const diceEl = document.querySelector('.dice');
 const btnNew = document.querySelector('.btn--new');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
+const btnHowToPlay = document.querySelector('.btn--howtoplay');
+const btnCloseTip = document.querySelector('.closetip');
 
 let scores, currentScore, activePlayer, playing;
 
@@ -57,9 +59,8 @@ btnRoll.addEventListener('click', function () {
     if (dice !== 1) {
       // Add dice to current score
       currentScore += dice;
-      document.getElementById(
-        `current--${activePlayer}`
-      ).textContent = currentScore;
+      document.getElementById(`current--${activePlayer}`).textContent =
+        currentScore;
     } else {
       // Switch to next player
       switchPlayer();
@@ -96,3 +97,18 @@ btnHold.addEventListener('click', function () {
 });
 
 btnNew.addEventListener('click', init);
+
+btnHowToPlay.addEventListener('click', function () {
+  document.querySelector('.tips').classList.remove('hidden');
+  document.querySelector('.overlay').classList.remove('hidden');
+});
+
+btnCloseTip.addEventListener('click', function () {
+  document.querySelector('.tips').classList.add('hidden');
+  document.querySelector('.overlay').classList.add('hidden');
+});
+
+document.querySelector('.overlay').addEventListener('click', function () {
+  document.querySelector('.tips').classList.add('hidden');
+  document.querySelector('.overlay').classList.add('hidden');
+});

@@ -22,6 +22,19 @@ body {
   justify-content: center;
 }
 
+nav {
+  color: white;
+  position: absolute;
+  top: 0;
+  text-align: center;
+  padding: 5px;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+nav p {
+  font-size: 1.5rem;
+}
+
 /* LAYOUT */
 main {
   position: relative;
@@ -138,6 +151,10 @@ main {
 .btn--hold {
   top: 46.1rem;
 }
+.btn--howtoplay {
+  top: 1rem;
+  width: 40rem;
+}
 
 .btn:active {
   transform: translate(-50%, 3px);
@@ -146,6 +163,17 @@ main {
 
 .btn:focus {
   outline: none;
+}
+.closetip {
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  font-size: 2rem;
+  position: absolute;
+  left: 56rem;
+  top: 3rem;
+  border-radius: 1rem;
+  cursor: pointer;
 }
 
 .dice {
@@ -168,4 +196,26 @@ main {
 
 .hidden {
   display: none;
+}
+
+.tips {
+  background-color: #333;
+  position: absolute;
+  width: 62rem;
+  top: 30rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+.overlay {
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  cursor: pointer;
 }

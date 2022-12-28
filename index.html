@@ -5,9 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="style.css" />
-    <title>Pig Game</title>
+    <title>Dice Game</title>
   </head>
   <body>
+    <nav>
+      <button class="btn btn--howtoplay">❓HOW To Play</button>
+      <div class="tips hidden">
+        <h3 style="padding: 1rem">
+          Player Who Got 50 Points First Win The Game
+        </h3>
+        <button class="closetip">&times</button>
+        <p>
+          Click Roll Dice to get a random number which will be added to your
+          current score.
+        </p>
+        <p>
+          Click Hold to save your current score to total score and switch to
+          another player turn
+        </p>
+        <p>
+          Getting number 1 will reset your current score and switch to another
+          player turn
+        </p>
+      </div>
+    </nav>
     <main>
       <section class="player player--0 player--active">
         <h2 class="name" id="name--0">Player 1</h2>
@@ -31,6 +52,7 @@
       <button class="btn btn--roll">🎲 Roll dice</button>
       <button class="btn btn--hold">📥 Hold</button>
     </main>
+    <div class="overlay hidden"></div>
     <script src="script.js"></script>
   </body>
 </html>
